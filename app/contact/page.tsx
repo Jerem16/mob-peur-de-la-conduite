@@ -1,0 +1,64 @@
+import { Metadata } from "next";
+import PageLazyLoader from "@components/PageLazyLoader";
+import dynamic from "next/dynamic";
+const LazyPage = dynamic(() => import("./lazyPage"), {
+    loading: () => null, // déjà géré par PageLazyLoader
+    ssr: true, // facultatif car true par défaut
+});
+
+export const metadata: Metadata = {
+    title: "Contact",
+    description:
+        "Contactez Peur de la conduite pour obtenir un accompagnement personnalisé en coaching auto. Du lundi au dimanche, de 7h à 20h. Téléphone : +33 6 74 25 91 81, Adresse : 17 Allée Didier Daurat, 76620 Le Havre.",
+    alternates: {
+        canonical: "https://peur-de-la-conduite.fr/contact",
+        media: {
+            "only screen and (max-width: 900px)":
+                "https://mobile.peur-de-la-conduite.fr/contact",
+            "only screen and (min-width: 900px)":
+                "https://desktop.peur-de-la-conduite.fr/contact",
+        },
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
+    openGraph: {
+        title: "Contact | Peur de la conduite",
+        description:
+            "Vous avez des questions ou besoin d'un coup de pouce pour vaincre la peur de la conduite ? Contactez-nous dès maintenant pour un accompagnement personnalisé au Havre.",
+        url: "https://peur-de-la-conduite.fr/contact",
+        siteName: "Peur de la conduite",
+        locale: "fr_FR",
+        type: "website",
+        images: [
+            {
+                url: "/mob-peur-de-la-conduite/img/about/avatar.webp",
+                width: 225,
+                height: 225,
+                alt: "Mounir Bouakkaz - Coaching conduite au Havre",
+            },
+        ],
+    },
+    icons: {
+        icon: [
+            {
+                url: "/mob-peur-de-la-conduite/img/favicon/logo.svg",
+                type: "image/svg+xml",
+            },
+        ],
+    },
+    other: {
+        "link:preload": "/mob-peur-de-la-conduite/img/contact/bg-contact.svg",
+        as: "image",
+        type: "image/svg+xml",
+    },
+};
+
+export default function Page() {
+    return (
+        <PageLazyLoader>
+            <LazyPage />
+        </PageLazyLoader>
+    );
+}
