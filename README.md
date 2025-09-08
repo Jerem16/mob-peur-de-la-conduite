@@ -1,5 +1,7 @@
 # peur-de-la-conduite
 
+[![trophy](https://github-profile-trophy.vercel.app/?username=Jerem16&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
+
 yarn run build
 
 Augmenter la mémoire : npx --node-arg=--max-old-space-size=4096 next dev
