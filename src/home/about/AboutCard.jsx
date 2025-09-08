@@ -12,7 +12,7 @@ const AboutCard = ({ cardIdentity, cardContent }) => {
                 </h3>
                 <Image
                     className="ab-img_head"
-                    src="/img/about/avatar.webp"
+                    src="/mob-peur-de-la-conduite/img/about/avatar.webp"
                     alt={`avatar de ${cardIdentity.firstName}`}
                     width={225}
                     height={225}
