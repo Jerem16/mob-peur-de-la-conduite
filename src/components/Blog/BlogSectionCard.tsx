@@ -2,7 +2,6 @@
 import React from "react";
 import { Section, Post, Author } from "@src/types/blog";
 import BlogList from "./BlogList";
-import ButtonLink from "../button/ButtonLink";
 
 interface SectionCardProps {
     section: Section;
@@ -25,11 +24,7 @@ export default function BlogSectionCard({
                     {section.title}
                 </h2>
                 <p className="sct-C-desc">{section.description}</p>
-                <div className="sct-C-link">
-                    <ButtonLink href={`/blog/sections/${section.slug}`}>
-                        Tous les articles !
-                    </ButtonLink>
-                </div>
+                <div className="sct-C-link"></div>
             </div>
             <div className="sct-C-content">
                 <BlogList posts={posts} authors={authors} />
