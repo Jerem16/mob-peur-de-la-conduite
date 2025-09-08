@@ -23,7 +23,7 @@ const Services: React.FC = () => {
                         />
                         <Image
                             className="srv-img_lesson"
-                            src="/img/services/cours-de-conduite.webp"
+                            src="/mob-peur-de-la-conduite/img/services/cours-de-conduite.webp"
                             alt="Image cours de conduite"
                             width={288}
                             height={265}
