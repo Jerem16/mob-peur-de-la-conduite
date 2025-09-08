@@ -49,7 +49,7 @@ export default async function PostPage({
     if (!post) return notFound();
     return (
         <SectionContainer id="blog" title="Blog" icon={<BlogIcon />}>
-            <ButtonPage href="/blog" />
+            <ButtonPage href="/mob-peur-de-la-conduite/blog" />
             <PostClient post={post} sections={sections} authors={authors} />
         </SectionContainer>
     );
