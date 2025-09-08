@@ -10,10 +10,7 @@ export default function DesktopRedirect() {
             return;
         }
         window.location.href =
-            "https://jerem16.github.io/dsk-peur-de-la-conduite/" +
-            window.location.pathname +
-            window.location.search +
-            window.location.hash;
+            "https://jerem16.github.io/dsk-peur-de-la-conduite/";
     }, []);
 
     return null;
