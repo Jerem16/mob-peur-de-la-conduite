@@ -12,7 +12,7 @@ import type { BlogData } from "@src/types/blog";
 
 const PUBLIC_DATA_URL = `${
     process.env.NEXT_PUBLIC_BASE_PATH ?? ""
-}/data/data.json`;
+}/mob-peur-de-la-conduite/data/data.json`;
 
 interface DataBlogContextProps {
     data: BlogData | null;
